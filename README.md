@@ -12,20 +12,16 @@ Food-4D systematically records the preparation processes of **20 types of homema
 
 
 
-* 
-**Objects:** 23 common food ingredients and 4 kitchen tools.
+* **Objects:** 23 common food ingredients and 4 kitchen tools.
 
 
-* 
-**Scenarios:** Real-life home kitchen simulation with dynamic environmental characteristics.
+* **Scenarios:** Real-life home kitchen simulation with dynamic environmental characteristics.
 
 
-* 
-**Data Scale:** 20 complete construction tasks, fully annotated with dense semantic and measurement labels.
+* **Data Scale:** 20 complete construction tasks, fully annotated with dense semantic and measurement labels.
 
 
-* 
-**Annotations:** High-precision measurements of food volume (mL) and mass (g), alongside ingredient attributes.
+* **Annotations:** High-precision measurements of food volume (mL) and mass (g), alongside ingredient attributes.
 
 
 
@@ -58,8 +54,7 @@ The dataset is organized by task index (`n1` to `n20`) and divided into three pr
 * **Stage 1 (Making):** Dynamic recording of the cutting, peeling, and arranging process. Contains synchronized raw data streams (RGB, Depth, EMG, Glove, Tobii).
 
 
-* 
-**Stage 2 (Modeling):** 3D scanning of the finished bento using a depth camera trajectory covering a 40cm hemisphere.
+* **Stage 2 (Modeling):** 3D scanning of the finished bento using a depth camera trajectory covering a 40cm hemisphere.
 
 
 * **Stage 3 (Measuring):** Ground truth recording. Contains `.xlsx` files with precise mass and volume measurements for every ingredient.
@@ -70,20 +65,41 @@ The dataset is organized by task index (`n1` to `n20`) and divided into three pr
 
 This repository provides the Python code used for the **synchronized multimodal sensor acquisition** during the experiment.
 
-* 
-**Synchronization:** The code handles timestamp alignment across all 6 sensors.
+* **Synchronization:** The code handles timestamp alignment across all 6 sensors.
 
 
-* 
-**Device Drivers:** Includes acquisition scripts for Azure Kinect, RealSense, Tobii, WISEGLOVE, and DELSYS EMG.
+* **Device Drivers:** Includes acquisition scripts for Azure Kinect, RealSense, Tobii, WISEGLOVE, and DELSYS EMG.
 
 
-* 
-**Data Processing:** `.bat` scripts and Python tools are provided to extract RGB frames and Depth maps from the recorded MKV files.
+* **Data Processing:** `.bat` scripts and Python tools are provided to extract RGB frames and Depth maps from the recorded MKV files.
 
 
 
 **Repository Link:** [https://github.com/Hush001/synchronized-sensor-for-food-4d](https://github.com/Hush001/synchronized-sensor-for-food-4d) 
+
+
+
+## 🛠️ Install 
+The code is designed to run on a Windows 10 system. All necessary dependencies and setup instructions for Windows have been provided to ensure smooth execution Make sure you have Python 3.7 or higher installed Install necessary Python packages. If you haven't done so already, you can use pip to install packages:
+    pip install open3d numpy pandas scipy pykinect_azure
+
+NOKOV
+The XINGYING software should be running, calibrated, and configured for network streaming before starting the Python scripts. The "Catch - trigger" switch in the data broadcast panel enables, that is, the remote trigger function is enabled. The port is the broadcast port for XINGYING to send control commands, and the default port is 7061
+
+Wise-gloves
+Connect the Manus USB to the computer,The raw data, Angle data, and arm spatial position data of the data glove are called in real time through python.
+
+Delsys
+Download and install the corresponding device SDK from Delsys official website (e.g. Trigno SDK)
+
+## Example 
+https://xingying3x-cn-docs.nokov.com/shi-si-ren-ti-mu-ban/yi-53-dian-ren-ti-tie-dian-ji-qi-gu-ge-shuo-ming Detailed Posting instructions can be found on this website.(If you have a nokov system you can also follow these instructions) You can visualize trc files using:
+
+    python action.py
+
+You can play back the Lxxx.xls file using the GraspMF.exe program in the wiseglove folder.
+
+You can apply for eye tracker freeware to process the raw eye tracker data（https://www.tobii.com/zh/products/software/data-analysis-tools/tobii-pro-lab/free-trial#freetrial）
 
 ## 📝 Citation
 
