@@ -106,7 +106,7 @@ You can apply for eye tracker freeware to process the raw eye tracker data（htt
 If you use the Food-4D dataset or code in your research, please cite our paper:
 
 ```bibtex
-@article{jiang2024food4d,
+@article{jiang2025food4d,
   title={Food-4D: A Spatiotemporal Multimodal Dataset for Dynamic Food Processing Analysis},
   author={Jiang, Shuo and Li, Zihan and Lu, Yuxi and Qiu, Jianing and Lo, Frank P.-W. and Su, Xiu and He, Bin},
   journal={Scientific data (Submitted)},
