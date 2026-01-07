@@ -109,7 +109,7 @@ If you use the Food-4D dataset or code in your research, please cite our paper:
 @article{jiang2024food4d,
   title={Food-4D: A Spatiotemporal Multimodal Dataset for Dynamic Food Processing Analysis},
   author={Jiang, Shuo and Li, Zihan and Lu, Yuxi and Qiu, Jianing and Lo, Frank P.-W. and Su, Xiu and He, Bin},
-  journal={IEEE Transactions on Multimedia (Submitted)},
+  journal={Scientific data (Submitted)},
   year={2025}
 }
 
